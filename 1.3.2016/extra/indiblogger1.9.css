@@ -1,0 +1,919 @@
+@charset "utf-8";
+/* 
+IE6 Specific Rules start here
+Just install Firefox, won't you?
+*/
+* {margin: 0; padding: 0;}
+body {
+	vertical-align: baseline;
+	text-align:center;
+	background-repeat:repeat-x;
+	font: 13px "Lucida Sans Unicode", Verdana, Arial, sans-serif;
+	color: #333;
+}
+p { 
+	margin: 1em 0;
+	line-height: 1.4em;
+}
+ul { list-style: none; }
+ol .plainjane { margin: 1em 0; }
+ol.plainjane li { margin-left: 2.3em; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+a img, :link img, :visited img { border: none; }
+h1, h2, h3, h4 {
+	font-weight: 400;	
+}
+h1 { font-size: 24px; }
+h2 { font-size: 18px; }
+h3 { font-size: 16px; }
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: inherit;
+}
+th, td { vertical-align: top; }
+hr {
+display: block;
+position: relative;
+padding: 0;
+margin: 16px auto;
+width: 100%;
+clear: both;
+border: none;
+border-top: 1px solid #ccc;
+font-size: 1px;
+line-height: 0;
+overflow: visible;	
+}
+del { text-decoration: line-through; }
+
+/* Global Classes */
+.fl { float: left !important; }
+.fr { float: right !important; }
+.clearfloat {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.aligncentre { text-align: center; }
+.fw { width: 916px; }
+.txt_s, small { font-size: 12px !important; }
+.txt_m { font-size: 13px !important; }
+.txt_b { font-size: 14px !important; }
+.grey { color:#666 !important; }
+.ml8 { margin-left: 8px !important; }
+.mr8 { margin-right: 8px !important; }
+.mb8 { margin-bottom: 8px !important; }
+.mt8 { margin-top: 8px !important; }
+.ml0 { margin-left: 0px !important; }
+.mr0 { margin-right: 0px !important; }
+.mb0 { margin-bottom: 0px !important; }
+.mt0 { margin-top: 0px !important; }
+.noborders { border: none !important; }
+.visible { display: inline-block !important; }
+.hidden { display: none !important; }
+.dis_inl { display: inline; }
+.dis_inlbl {display: inline-block; vertical-align: middle; }
+.dis_bl { display: block; }
+.fancy { font-family: Georgia, "Times New Roman", Times, serif; }
+.messagebox {
+	border: 1px solid #FFCC66;
+	padding: 10px 10px 10px 42px;
+	color: #000;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	background: #FFFFCC no-repeat 10px 6px;
+}
+.errormsg {
+	background-image: url(https://cdn.indiblogger.in/v3/images/ui/icons/24_error.png);
+}
+.alertmsg {
+	background-image: url(https://cdn.indiblogger.in/v3/images/ui/icons/24_alert.png);
+}
+.successmsg {
+	background-image: url(https://cdn.indiblogger.in/v3/images/ui/icons/24_confirm.png);
+}
+.infomsg {
+	background-image: url(https://cdn.indiblogger.in/v3/images/ui/icons/24_info.png);
+}
+.rounded3 {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;	
+}
+.bgwhite { background-color:#FFF; }
+.txtbutton {
+	background-image: url(https://cdn.indiblogger.in/v3/images/ui/bg/txtbuttonbg.png);
+	background-repeat:repeat-x;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 3px 8px;
+	color: #FFF !important;
+	font-weight: normal;
+	display: inline-block;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+}
+.txtbutton_s {
+	padding: 2px 6px;
+}
+.txtbutton_m {
+	font-size: 16px; line-height: 20px;
+}
+.txtbutton_b {
+	font-size: 20px;
+	padding: 6px 10px;
+}
+.txtbutton:hover { text-decoration:none;}
+.txtbutton img { vertical-align: middle; }
+.txtbutton img.before { margin-right: 10px; }
+.txtbutton img.after { margin-left: 10px; }
+.list_para li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #DFDFDF;
+	color: #666;
+}
+.listing {
+    background-color: #F4F4F4;
+    border-color: #E0E0E0;
+    border-style: none none solid;
+    border-width: 1px;
+    margin-top: 15px;
+    padding: 8px;
+	overflow: auto;
+	font-size: 12px;
+	word-wrap: break-word;
+	position: relative;
+	line-height: 17px;
+}
+.listing h4 a {
+	font-size: 16px;
+}
+.listing blockquote {
+	line-height: 1.3em;
+	margin-top: 2px;
+}
+.profilepic {
+	padding: 2px;
+	border: 1px dotted #CCC;
+	display: inline-block;
+	margin-right: 8px;
+}
+.avatar_M_200, .avatar_F_200, .avatar_U_200, .avatar_M_80, .avatar_F_80, .avatar_U_80, .avatar_M_60, .avatar_F_60, .avatar_U_60, .avatar_M_45, .avatar_F_45, .avatar_U_45, .avatar_M_30, .avatar_F_30, .avatar_U_30 {
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.avatar_M_25, .avatar_F_25, .avatar_U_25 {
+	background-repeat: no-repeat;
+}
+.avatar_M_200 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_m_200.png); }
+.avatar_F_200 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_f_200.png); }
+.avatar_U_200 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_u_200.png); }
+.avatar_M_80 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_m_80.png); }
+.avatar_F_80 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_f_80.png); }
+.avatar_U_80 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_u_80.png); }
+.avatar_M_60 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_m_60.png); }
+.avatar_F_60 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_f_60.png); }
+.avatar_U_60 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_u_60.png); }
+.avatar_M_45 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_m_45.png); }
+.avatar_F_45 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_f_45.png); }
+.avatar_U_45 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_u_45.png); }
+.avatar_M_30 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_m_30.png); }
+.avatar_F_30 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_f_30.png); }
+.avatar_U_30 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_u_30.png); }
+.avatar_M_25 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_m_25.png); }
+.avatar_F_25 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_f_25.png); }
+.avatar_U_25 { background-image: url(https://cdn.indiblogger.in/v3/images/ui/gravatars/gravatar_u_25.png); }
+.listing .votecounter {
+	text-align: center;
+	background: #E0E0E0 url(https://cdn.indiblogger.in/v3/images/ui/icons/32_heart.png) no-repeat 4px 4px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	height: 32px;
+	padding: 4px 4px 4px 38px;
+}
+.listing em {
+	font-style:normal;
+	color: #666;
+}
+.listing em a {
+	color: #666;
+	border-bottom: 1px solid #666;
+	text-decoration: none;
+}
+.listing .rank {
+	text-align: center;
+	background: #E0E0E0 url(https://cdn.indiblogger.in/v3/images/ui/globalsprite-1.2.png) no-repeat 4px -339px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	height: 32px;
+	padding: 4px 4px 4px 38px;
+	position: absolute;
+	right: 8px;
+	bottom: 8px;
+}
+.listing .tags { width: 460px; padding-top: 3px; margin-left: 74px; }
+.listing .tag {
+	background: #E0E0E0 url(https://cdn.indiblogger.in/v3/images/ui/icons/16_tag.png) no-repeat 3px center;
+	padding: 3px 3px 3px 21px;
+	display: inline-block;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;	
+}
+ul.tags { margin-top: 5px;}
+.tags li { display: inline; }
+.tags li a { padding: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.tags li a:hover { color: #FFF !important; text-decoration:none; }
+.sorter {
+	color: #FFF !important;
+	text-decoration: none !important;
+	background: #666;
+	padding: 2px 5px;
+	margin-bottom: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 12px;
+}
+.sorter:hover { background: #000; }
+.external {
+	background: url(https://cdn.indiblogger.in/v3/images/ui/icons/16_external.gif) no-repeat right center;
+	padding-right: 20px;
+}
+.listing .action {
+	float: right;
+	height: 16px;
+	width: 16px;
+	padding: 3px;
+	text-indent: -9999px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-left: 3px;
+}
+.listing .action:hover { background-color:#333; }
+.listing .add { background: url(https://cdn.indiblogger.in/v3/images/ui/globalsprite-1.2.png) no-repeat 4px -33px;	}
+.listing .kick { background: url(https://cdn.indiblogger.in/v3/images/ui/globalsprite-1.2.png) no-repeat 3px -71px; }
+.listing .mutual { background: url(https://cdn.indiblogger.in/v3/images/ui/globalsprite-1.2.png) no-repeat 3px -181px; }
+.listing .sendmail { background: url(https://cdn.indiblogger.in/v3/images/ui/globalsprite-1.2.png) no-repeat 3px -223px; }
+.pagerbarT {
+	margin-top: 20px;
+	margin-bottom: 17px;
+}
+.pagerbarB {
+	margin-top: 20px;
+	margin-bottom: 1px;
+}
+.pager {
+	border: 1px solid #B3B3B3;
+	font-size: 11px;
+	line-height: 18px;
+	padding: 5px 5px 4px;
+	text-decoration: none;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	display:inline-block;
+	margin-bottom: 3px;
+	text-shadow: 0 1px 0 #FFFFFF;
+	color: #000 !important;
+}
+.pager.thispage { 	
+	color: #FFF !important;
+	text-shadow: 0 1px 0 #000;
+}
+.pager:hover {
+	text-decoration: none;
+	border: 1px solid #111111;
+	color: #FFF !important;
+	text-shadow: 0 1px 0 #000;
+}
+.gr150 {
+	background: url(https://cdn.indiblogger.in/v3/images/ui/bg/gradient_v_150.png) repeat-x;	
+}
+/* End Global Classes */
+
+/* Layout */
+#loc {
+	text-align:left;
+	margin:0 auto;
+}
+#header {
+	background-repeat:repeat-x;
+	padding:0 8px 0 0;
+	display: inline-block;
+	width: 908px;
+}
+#crumbs {
+	font-size:11px;
+	color:#FFF;
+	width: 900px;
+	padding: 8px 8px 4px;
+	float: left;
+	overflow: hidden;
+}
+#content {
+	width:100%;
+	padding: 8px;
+	overflow: auto;
+}
+#maincontent {
+	background-color: #FFF;
+	padding: 16px 10px;
+	float: left;
+	width: 626px;
+	min-height: 356px;
+}
+.maincontent { /* Use for multiple maincontent sections */
+	background-color: #FFF;
+	padding: 16px 10px;
+	float: left;
+	width: 626px;
+}
+.extend {
+	width: 880px !important; /* Apply to maincontent when sidebar is removed */
+}
+#sidebar {
+	background: #FFF;
+	padding: 16px 8px;
+	width: 230px;
+	float: left;
+	margin-left: 8px;
+	min-height: 356px;
+}
+.sidebar { /* Use for multiple sidebar sections */
+	background: #FFF;
+	padding: 16px 8px;
+	width: 230px;
+	float: left;
+	margin-left: 8px;
+}
+#footer {
+	overflow: auto;
+	margin-top: 8px;
+}
+/* End Layout */
+
+
+/* #header */
+#indilogo {
+	width:241px;
+	float:left;
+	margin-right:7px;
+}
+#topnav {
+	float:right;
+	/*width:630px;*/
+	margin-top:4px;
+}
+#topnav li {
+	display: inline;	
+}
+#topnav li a {
+	float:right;
+	height: 18px;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	margin-left:3px;
+	outline: none;
+}
+#topnav #tn1 { /* FAQ */
+	width: 45px;
+	background-position: 0px 0px;
+}
+#topnav #tn1:hover {
+	background-position: 0px -19px;
+}
+#topnav #tn2, #topnav #tn3, #topnav #tn4, #topnav #tn10, #topnav #tn7 { /* Icons only */
+	width: 19px;
+}
+#topnav #tn2 { /* IndiBlue */
+	background-position: -45px 0px;
+}
+#topnav #tn2:hover {
+	background-position: -45px -19px;
+}
+#topnav #tn3 { /* IndiRed */
+	background-position: -65px 0px;
+}
+#topnav #tn3:hover {
+	background-position: -65px -19px;
+}
+#topnav #tn4 { /* IndiSilver */
+	background-position: -86px 0px;
+}
+#topnav #tn4:hover {
+	background-position: -86px -19px;
+}
+#topnav #tn10 { /* IndiClear */
+	background-position: -106px 0px;
+}
+#topnav #tn10:hover {
+	background-position: -106px -19px;
+}
+#topnav #tn5 { /* Sign in */
+	width: 58px;
+	background-position: 0px -38px;
+}
+#topnav #tn5:hover {
+	background-position: 0px -57px;
+}
+#topnav #tn6 { /* Sign out */
+	width: 66px;
+	background-position: -59px -38px;
+}
+#topnav #tn6:hover {
+	background-position: -59px -57px;
+}
+#topnav #tn7 { /* Feed */
+	background-position: -126px 0px;
+}
+#topnav #tn7:hover {
+	background-position: -126px -19px;
+}
+#topnav #tn8 { /* Indimail */
+	width: 67px;
+	background-position: 0px -76px;
+}
+#topnav #tn8:hover {
+	background-position: 0px -95px;
+}
+#topnav #tn8.unread {
+	background-position: -68px -76px;
+}
+#topnav #tn8.unread:hover {
+	background-position: -68px -95px;
+}
+#topnav #tn9 { /* Dashboard */
+	width: 81px;
+	background-position: 0px -115px;
+}
+#topnav #tn9:hover {
+	background-position: 0px -134px;
+}
+
+
+/* IndiNav */
+#nav {
+	float:right;
+	margin-top:15px;	
+}
+#nav li {
+	float: left;
+}
+#nav > li > a {
+	color:#FFF;
+	margin-right:2px;
+	display:block;
+	height:20px;
+	font-size: 12px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	padding-top: 6px;
+	padding-right: 9px;
+	padding-left: 9px;
+	line-height: 16px;
+}
+#nav li a:hover { text-decoration: none; }
+#nav li a.navlinkactive {
+	border-right-style:solid;
+	border-left-style:solid;
+	border-top-style:solid;
+	border-width:1px;
+}
+
+.nav > li > a:not(.droppy) {
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	transition: all .3s ease;
+}
+.nav > li > div {
+	position: absolute;
+	display: block;
+	z-index:6666;
+	top: 27px;
+	right: 0px;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+	border-radius: 0 0 0 3px;
+	-webkit-transition: all .3s ease .10s;
+	-moz-transition: all .3s ease .10s;
+	-o-transition: all .3s ease .10s;
+	-ms-transition: all .3s ease .10s;
+	transition: all .3s ease .10s;
+	padding-right:10px;
+	-webkit-box-shadow: -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         -2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+}
+.nav > li > div.nonblogger {
+	width:160px;	
+}
+.nav > li > div.blogger {
+	width:300px;	
+}
+.nav li a.droppy {
+	background-image: url(https://cdn.indiblogger.in/v3/images/ui/globalsprite-1.2.png);
+	background-repeat: no-repeat;
+	background-position: right -466px;
+	padding-right:14px !important;
+	margin-right:0px !important;
+}
+.nav > li:hover > div {
+	opacity: 1;
+	visibility: visible;
+	overflow: visible;
+	padding-top:10px;
+	padding-bottom:20px;
+}
+.nav > li > div > .nav-column {
+	float:right;
+	text-align:right;
+}
+.nav > li > div > .nav-column:nth-of-type(2) {
+	margin-right:10px;
+	padding-right:10px;
+}
+.nav > li > div > .nav-column a {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	color:#FFF;
+	display:block;
+	font-size: 12px;
+	padding-top: 6px;
+	padding-right: 9px;
+	padding-left: 9px;
+	padding-bottom:6px;
+}
+
+
+#searchbar {
+	height: 40px;
+	width: 908px;
+}
+#searchbar .tagline {
+	padding-left:10px;
+	padding-top:12px;
+	font-size:14px;
+	font-weight:400;
+	color:#FFF;
+	font-style:normal;
+	line-height: 17px;
+}
+#indisearchform {
+	padding-top: 7px;
+	padding-right: 2px;
+	position: relative;
+	width: 247px;
+}
+#indisearchform #indisearchq {
+	font-size: 14px;
+	padding: 3px;
+	height: 17px;
+	color: #666;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border: 1px solid #FFF;
+	width: 219px;
+	position: absolute;
+	right: 19px;
+	background-color: #FFF; /* For opera */
+}
+#indisearchbutton {
+	background: #FFF url(https://cdn.indiblogger.in/v3/images/ui/globalsprite-1.2.png) no-repeat -1px 4px;
+	text-indent: -9999px;
+	width: 20px;
+	height: 25px;
+	cursor: pointer;
+	position: absolute;
+	right: 0px;
+	border: 1px solid #FFF;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	/* 3 lines below are just for IE7 */
+	display:block;
+	font-size:0px;
+	line-height:0px;
+}
+#crumbs li {
+	float: left;
+	font-weight:bold;
+	margin-right: 5px;
+}
+#crumbs a {
+	padding-right: 15px;
+}
+#crumbs a:hover {
+	color: #FFF;
+}
+/* end #header */
+
+/* #Footer */
+#footer { font-size: 12px; }
+#footercontent {
+	width: 900px;
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: auto;
+	padding-right: 8px;
+	padding-bottom: 84px;
+	padding-left: 8px;
+}
+#footercontent .copyright {
+	padding-top: 5px;
+}
+#footercontent .top {
+	width: 16px;
+	margin-top: 10px;
+	margin-right: 8px;	
+}
+#footercontent .footerlogo {
+	margin-top: 10px;
+	margin-right: 112px;
+}
+#footercontent h5 {
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#footercontent ul {
+	float: left;
+	margin-right: 47px;
+	margin-top: 10px;
+}
+#footercontent li {
+	font-weight: bold;
+	margin-top: 5px;
+}
+#footercontent li img {
+	vertical-align: middle;
+	margin-right: 3px;	
+}
+#footercontent li.fineprint { font-size: 12px; font-weight: normal; }
+/* End #footer */
+
+/* Form Styles */
+.indiform {
+	margin-top: 30px;	
+}
+.indiform fieldset {
+	display: block;
+	border-style:solid;
+	border-width:1px;
+	margin-bottom:40px;
+	position: relative;
+	float: left;
+}
+.lastfieldset {
+	margin-bottom:10px !important;
+}
+.indiform fieldset.innerfieldset {
+	margin-left: 5px;
+	margin-top:20px;
+}
+.indiform fieldset legend {
+	font-weight:bold;
+	padding: 6px;
+	color: #FFF;
+	float: left;
+	left: 8px;
+	top: -20px;
+	position: absolute;
+}
+#sidebar .indiform fieldset legend, .sidebar .indiform fieldset legend { font-size: 12px; }
+.indiform fieldset legend img {
+	margin-right:5px;
+	vertical-align: middle;
+}
+.indiform fieldset.innerfieldset legend {
+	font-weight: normal;
+	background-color:#666;
+}
+.indiform ol {
+	margin: 0px;
+	padding: 16px 8px 8px;
+	list-style: none;
+}
+.indiform ol li {
+	padding: 10px;
+}
+.indiform .focused {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#maincontent .indiform .focused, .maincontent .indiform .focused { background:#333; color: #FFF; }
+.legendfocused {
+	border: 5px solid #F00;		
+}
+.reqconf {
+	background-repeat: no-repeat !important;
+	background-position: right top !important;
+}
+.req {
+	background-repeat: no-repeat !important;
+	background-position: right top !important;
+}
+.indiform .indifield {
+	font-size: 13px;
+	margin-top: 5px;
+	background: #FFF url(https://cdn.indiblogger.in/v3/images/ui/bg/fieldbg.gif) repeat-x top;
+	color: #333333;
+	border-top: 1px solid #7C7C7C;
+	border-right: 1px solid #C3C3C3;
+	border-bottom: 1px solid #DDDDDD;
+	border-left: 1px solid #C3C3C3;
+	padding: 2px;
+	margin-top: 5px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#maincontent .uniwidth, .maincontent .uniwidth { width: 582px; }
+#sidebar .uniwidth, .sidebar .uniwidth { width: 185px; }
+.sidebar.littleavatars img { vertical-align: middle; margin-right: 4px; }
+#maincontent .indiform label, .maincontent .indiform label { min-width: 400px; }
+#sidebar .indiform label, .sidebar .indiform label { font-size:12px; }
+.indiform label.error {
+	color: #FFF;
+	background: #900 url(https://cdn.indiblogger.in/v3/images/ui/icons/16_alert.png) no-repeat 5px center;
+	padding: 8px 8px 8px 28px;
+	display: block;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-top: 3px solid #C00;
+}
+.beprecise label.error {
+	display: inline !important;
+	background: #900 url(https://cdn.indiblogger.in/v3/images/ui/icons/16_alert.png) no-repeat 5px center  !important;
+	padding: 4px 12px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	border-top: none;
+	border-left: 4px solid #C00;
+}
+.indiform button {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+#maincontent .indiform button, .maincontent .indiform button { padding: 5px; }
+#sidebar .indiform button, .sidebar .indiform button {
+	padding: 2px;
+	font-weight: bold;
+}
+.indiform button.biggerbutton { font-size: 24px; }
+.indiform button:focus { outline: none; }
+.indiform button::-moz-focus-inner { border: 0; }
+.indiform button img {
+	vertical-align:middle;
+	margin-right: 5px;
+}
+#recaptcha_response_field { width: 297px; }
+/* End form styles */
+
+/* Tabs */
+.ui-tabs .ui-tabs-hide { display: none; }
+#tabs {
+	margin-top: 16px;
+	margin-bottom: 8px;
+}
+#tabs .tabs { height: 24px; }
+#tabs .tabs li { display: inline-block; }
+#tabs .tabs li a {
+	background: #CCC url(https://cdn.indiblogger.in/v3/images/ui/bg/txtbuttonbg.png) repeat-x;
+	color: #333;
+	font-size: 12px;
+	padding: 8px 12px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;
+	margin-right: 2px;
+	outline: none;
+	font-weight: bold;
+}
+#tabs .tabs li.ui-state-active a {
+	color: #FFF;
+}
+#tabs .tabs li.ui-state-default a:hover {
+	background: #BCBCBC url(https://cdn.indiblogger.in/v3/images/ui/bg/txtbuttonbg.png) repeat-x bottom;
+	text-decoration: none;
+	color: #000;
+}
+#tabs .tabs li.ui-state-active a:hover {
+	cursor: text;
+	color:#FFF;
+}
+#tabs .tabs li a img { margin-right: 4px; vertical-align: middle;}
+#tabs .tabcontent {
+	padding: 8px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;
+	min-height: 250px;
+	overflow: auto;
+}
+/* Tabs */
+.ui-datepicker {
+	font-size: 13px !important;
+}
+
+/* Sidebar */
+.sidebar.sidebarlinks { padding-bottom: 10px; }
+.sidebar.sidebarlinks a.reviews { background-position: 8px 5px; }
+.sidebar.sidebarlinks a.feed { background-position: 8px -37px; }
+.sidebar.sidebarlinks a.new { background-position: 8px -78px; }
+.sidebar.sidebarlinks a.mytopics { background-position: 8px -118px; }
+.sidebar.sidebarlinks a.topics { background-position: 8px -227px; }
+.sidebar.sidebarlinks a.untrack { background-position: 8px -269px; }
+.sidebar.sidebarlinks a.track { background-position: 8px -308px; }
+.sidebar.sidebarlinks a.inbox { background-position: 8px -350px; }
+.sidebar.sidebarlinks a.stats { background-position: 8px -390px; }
+.sidebar.sidebarlinks a.posts { background-position: 8px -433px; }
+.sidebar.sidebarlinks a.profile { background-position: 8px -477px; }
+.sidebar.sidebarlinks a.indispatch { background-position: 8px -691px; }
+.sidebar.sidebarlinks a.indistatus { background-position: 8px -730px; }
+.sidebar.sidebarlinks a.mybadges { background-position: 8px -768px; }
+.sidebar.sidebarlinks a.settings { background-position: 8px -521px; }
+.sidebar.sidebarlinks a.network { background-position: 8px -565px; }
+.sidebar.sidebarlinks a.mynetworkposts { background-position: 8px -650px; }
+.sidebar.sidebarlinks a.dashboard { background-position: 8px -608px; }
+
+.sidebar_indispired {
+	background-image: url(https://cdn.indiblogger.in/v3/images/indispire/icon_idea_smaller.png);
+	background-repeat: no-repeat;
+	background-position: 220px 3px;
+}
+
+
+/* Protected Search Pages */
+a.searchprotect {
+	display:inline-block;
+	background-color: #F3F3F3;
+	padding: 20px 20px 20px 50px;
+	background-image: url(https://cdn.indiblogger.in/v3/images/ui/icons/24_lock.png);
+	background-repeat: no-repeat;
+	background-position: 14px 17px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	font-size: 16px;
+	font-weight: bold;
+	margin-top:30px;
+	margin-right:15px;
+}
+a.searchprotect:hover {
+	text-decoration:none;
+	background-color:#333333;
+	color:#F5F5F5;
+}
+a.searchprotect span {
+	display:inline-block;
+	padding-bottom:4px;
+}
+a.searchprotect span {
+	border-bottom: 2px solid #3463B1;
+}
+a.searchprotect:hover span {
+	border-bottom: 2px solid #FFF;
+}

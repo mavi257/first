@@ -1,0 +1,144 @@
+@charset "utf-8";
+body {
+	
+	background-color: #2E5698;
+}
+
+a:link, a:active, a:visited {
+	color: #3463B1;
+}
+
+#topnav #tn2:hover {
+	cursor: default;
+}
+.navlink:hover {
+	background-color: #4F7DCA;
+}
+.navlinkactive {
+	border-color:#4F7DCA;
+	background-color:#000000;
+}
+.nav > li:hover > a:not(.navlinkactive) {  background-color: #4f7dca; }
+.nav > li > div { background: #4f7dca; }
+.nav > li > div > .nav-column:nth-of-type(2) { border-right: 1px dotted #7C9ED8; }
+.nav > li > div > .nav-column a { border-bottom: 2px solid #4f7dca; }
+.nav > li > div > .nav-column a:hover {
+	border-bottom: 2px solid #2C518F;
+	background-color: #3462AD;
+}
+#crumbs a {
+	color: #B6C9E9;
+	background: url(https://cdn.indiblogger.in/v3/images/themes/blue/crumbs.png) no-repeat right 4px;
+}
+#content {
+	background-color: #8D9EBB;
+}
+.tags li a:hover { background-color: #3463B1; }
+
+/* Footer */
+#footer { background: #111 url(https://cdn.indiblogger.in/v3/images/themes/blue/f_bg.gif) repeat-x; }
+#footer a { color: #95B0DF; }
+#footercontent {
+	background: url(https://cdn.indiblogger.in/v3/images/themes/blue/footertagline.png) no-repeat center bottom;
+	color: #CCC;
+}
+#footercontent h5 { color: #DFDFDF; }
+#footer a:hover {
+	color: #FFF;
+	background-color: #234273;
+	text-decoration:none;
+}
+#footercontent li.fineprint { color: #666; }
+#footercontent span { color: #FC3; }
+.txtbutton {
+	background-color:#2E5698;
+}
+.txtbutton:hover {
+	background-color:#1A2F53;
+}
+.txtbutton_a, .txtbutton_a:hover { background-color:#900; cursor: text; }
+/* Form Styles */
+.indiform fieldset {
+	background-color:#F3F7FC;
+	border-color:#8F9AA7 #C1CAD5 #C1CAD5;
+}
+.indiform fieldset legend {
+	background: #2E5698;
+}
+#sidebar .indiform .focused, .sidebar .indiform .focused { background:#DDE9F7; }
+.req {
+	background-image:url(https://cdn.indiblogger.in/v3/images/themes/blue/formhint_req.png) !important;
+}
+.reqconf {
+	background-image:url(https://cdn.indiblogger.in/v3/images/themes/blue/formhint_reqconf.png) !important;
+}
+.indiform button {
+	color: #333;
+	border-top: 2px solid #8F9AA7;
+	border-right: 2px solid #C1CAD5;
+	border-bottom: 2px solid #C1CAD5;
+	border-left: 2px solid #C1CAD5;
+}
+.indiform button:focus, .indiform button:hover {
+	background: #96B3DE;
+	color: #FFF;
+	border-top: 2px solid #4E7EC7;
+	border-right: 2px solid #89A9DA;
+	border-bottom: 2px solid #89A9DA;
+	border-left: 2px solid #89A9DA;
+}
+/* Global Classes */
+.size13 { font-size:13px; color:hsl(221, 9%, 49%) !important; }
+.size14 { font-size:14px; color:hsl(221, 15%, 49%) !important; }
+.size15 { font-size:15px; color:hsl(221, 21%, 49%) !important; }
+.size16 { font-size:16px; color:hsl(221, 28%, 49%) !important; }
+.size17 { font-size:17px; color:hsl(221, 35%, 49%) !important; }
+.size18 { font-size:18px; color:hsl(221, 41%, 49%) !important; }
+.size19 { font-size:19px; color:hsl(221, 47%, 49%) !important; }
+.size20 { font-size:20px; color:hsl(221, 53%, 49%) !important; }
+.size21 { font-size:21px; color:hsl(221, 59%, 49%) !important; }
+.listing:hover {
+	background-color: #E7EDF8;
+	border-bottom-color: #5783CC;
+}
+.listing:hover .votecounter { background-color: #446793; color: #FFF; }
+.listing:hover .rank { background-color: #446793; color: #FFF; }
+.listing em a:hover { color: #3463B1; border-bottom: 1px solid #000; }
+.listing .action { background-color: #2E5698; }
+.listing .tag:hover { text-decoration:none; background-color: #446793; color:#FFF;}
+.sorter.sortee { background: #3463B1 !important;  cursor: text; }
+.pager { background: #E6E6E6 url(https://cdn.indiblogger.in/v3/images/themes/blue/pagersprite.png) no-repeat 0px 0px; }
+.pager.thispage {
+	background: #2E5698 url(https://cdn.indiblogger.in/v3/images/themes/blue/pagersprite.png) repeat 0px 87px;
+	border: 1px solid #234273;
+}
+.pager:hover { background: #E6E6E6 url(https://cdn.indiblogger.in/v3/images/themes/blue/pagersprite.png) no-repeat 0px -115px; }
+/* Tabs */
+#tabs .tabs li.ui-state-active a, #tabs .tabs li.ui-state-active a:hover {
+	background: #2E5698 url(https://cdn.indiblogger.in/v3/imagesui/bg/txtbuttonbg.png) repeat-x bottom;
+}
+#tabs .tabcontent {
+	border-top: 6px solid #2E5698;
+	border-right: 1px solid #2E5698;
+	border-bottom: 1px solid #2E5698;
+	border-left: 1px solid #2E5698;
+}
+/* Sidebar */
+.sidebar.sidebarlinks a, #cat_toggler, #inditalk_toggler, #related_toggler {
+	padding: 8px 6px 8px 40px;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 4px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 14px;
+	background-color: #C0D1ED;
+	background-repeat: no-repeat;
+	background-image: url(https://cdn.indiblogger.in/v3/images/ui/sidebarlinksprite-1.3.png);
+	color: #333;
+}
+.sidebar.sidebarlinks a:hover, #cat_toggler:hover, #inditalk_toggler:hover, #related_toggler:hover  {
+	background-color: #234273;
+	color: #FFF;
+}
