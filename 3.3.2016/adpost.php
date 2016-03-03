@@ -46,21 +46,6 @@ $page=1;
 
 $start_from = ($page-1) * $per_page;
 
-     if(!empty($_SESSION['userid'])) {
-$userid = $_SESSION['userid'];}
-else
-{
-    $userid='0';
-}
-  $s = "SELECT * FROM user where userid='$userid' ";
-$re=mysqli_query($conn,$s);
-
-require 'config.php';
-
-
-@$cat=$_GET['cat'];
-@$cat3=$_GET['cat3']; 
-$r=mysqli_fetch_array($re,MYSQLI_ASSOC);
 if (isset($_POST['exp'])){
     header('Content-Type: text/csv; charset=utf-8');
     header('Content-Disposition: attachment; filename=post.csv');
@@ -107,28 +92,15 @@ if (isset($_POST['exp'])){
 				}
 			}
 				</style>
-<link rel="stylesheet" id="all-css-6" href="css/wp1.css" type="text/css" media="all">
+	<link rel="stylesheet" id="all-css-6" href="css/wp1.css" type="text/css" media="all">
 				</style>
 <link rel="stylesheet" id="all-css-6" href="css/wp2.css" type="text/css" media="all">
 <link rel="stylesheet" id="all-css-6" href="css/style.css" type="text/css" media="all">
         
     
-<script type="text/javascript" src="jquery.min.js"></script>
-    <script src="./jquery.tabletoCSV.js" type="text/javascript" charset="utf-8"></script>
-   <script>
-        $(function(){
-            $("#export").click(function(){
-                $("#export_table").tableToCSV();
-            });
-        });
-    </script>
-       <script>
-        $(function(){
-            $("#export1").click(function(){
-                $("#export_table1").tableToCSV();
-            });
-        });
-    </script>
+<link rel="stylesheet" id="all-css-6" href="css/style.css" type="text/css" media="all">
+        
+    <script type="text/javascript" src="jquery.min.js"></script>
 
 <style type="text/css" media="screen">
 
@@ -284,79 +256,7 @@ h2#polldaddy-header, h2#poll-list-header{
  
 		
  </h1>
-<?php $sql112 = "SELECT * FROM post  order by postid ";
-    $result112 = $conn->query($sql112);
-            ?>
-           <div style='display:none' > <table id="export_table1" class="wp-list-table widefat fixed striped posts">
-      
-	<thead>
-	<tr>
-		<td id="cb" class="manage-column column-cb check-column"><input type="checkbox" name="select_all" id="select_all" value=""/></td><th scope="col" id="title" class="manage-column column-title column-primary sortable desc"><a><span>Title</span></a></th><th scope="col" id="author" class="manage-column column-author">Author</th><th scope="col" id="categories" class="manage-column column-categories">Categories</th><th scope="col" id="comments" class="manage-column column-comments num sortable desc"><a href=""><span><span class="vers comment-grey-bubble" title="Comments"><span class="screen-reader-text">Comments</span></span></span></a></th><th scope="col" id="date" class="manage-column column-date sortable asc"><a ><span>Date</span></a></th>	</tr>
-    </thead>
-            
-            <?php
 
-     while($row112 = $result112->fetch_assoc()) {  
- $userid1121=$row112["userid"];
-         $sql1122 = "SELECT * FROM user where userid=$userid1121";
-       $result1122 = $conn->query($sql1122);
- $row1122 = $result1122->fetch_assoc();
- $cat_id1123=$row112["cat_id"];
- $sql1124 = "SELECT * FROM category where cat_id=$cat_id1123";
- $result1124 = $conn->query($sql1124);
- $row1124 = $result1124->fetch_assoc();
-
-
- if($row112['cat_id']==0)
- {
-  $category1125='Uncategorized';
- }
-else
-{
- $category1125=$row1124["category"];
-}
-
-
- 
-         $postid1126=$row112["postid"];
-          $sql1127 = "SELECT * FROM comment where postid=$postid1126";
-       $result1127 = $conn->query($sql1127);
-$count1127=$result1127->num_rows;
-
-              ?>
-<tbody id="the-list">
-				<tr id="post" class="iedit author-self level-0 post- type-post status-draft format-standard hentry category-">
-			<th scope="row" class="check-column">			
-			<input type="checkbox" name="checked_id[]" class="checkbox" value="<?php echo $row112['postid']; ?>"/>
-			
-		</th><td class="title column-title has-row-actions column-primary page-title" data-colname="Title"><strong><?php echo $row112["title"];?> </strong>
-
-
-<div class="row-actions"><span class="edit"><a href="editpost?postid=<?php  echo $row112["postid"];?>" title="Edit this item">Edit</a> | </span><span class="inline hide-if-no-js">| </span><span class="trash"><a class="submitdelete" title="Move this item to the Trash" href="delpost?postid=<?php  echo $row112["postid"];?>">Trash</a> | </span><span class="view"><a href="post?postid=<?php  echo $row112["postid"];?>" rel="permalink">View</a></span></div></td><td class="author column-author" data-colname="Author"><a href="userpost"><?php echo $row1122["username"];?></a></td><td class="categories column-categories" data-colname="Categories"><?php echo $category1125;?></td>
-                    
-                
-           
-            <td class="comments column-comments" data-colname="Comments">		<div class="post-com-count-wrapper">
-		<a href="adcom" class="post-com-count post-com-count-approved"><span class="comment-count-approved" aria-hidden="true"><?php echo $count1127;?></span></a>		</div>
-		</td>        
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <td class="date column-date" data-colname="Date"><abbr title="<?php echo $row112["created"];?>"><?php echo $row112["created"];?></abbr></td>		</tr>
-	
-		</tbody>
-  
-  <?php }?>
-
-</table>
-           </div> 
-            
-            
-            
             
             
             
